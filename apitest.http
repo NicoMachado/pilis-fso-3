@@ -18,3 +18,35 @@ Content-Type: application/json
     "content": "Do not forget to set right content type",
     "important": true
 }
+
+
+###
+GET http://localhost:3001/api/persons
+
+
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Person 111",
+    "number": "252-54-2522"
+}
+
+###
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "number": "252-54-2522"
+}
+
+### Error por Nombre Duplicado
+POST http://localhost:3001/api/persons
+Content-Type: application/json
+
+{
+    "name": "Arto Hellas",
+    "number": "252-54-2522"
+}
